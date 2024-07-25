@@ -9,3 +9,5 @@ def add_review(review: str) -> str:
 
     with open(list_files.reviews, "w", encoding="utf-8") as file:
         json.dump(reviews, file)
+
+    return "Ваш відгук успішно додано"
