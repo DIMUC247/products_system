@@ -15,7 +15,7 @@ async def show_reviews(message: Message, state: FSMContext):
     msg = ""
 
     for i, review in enumerate(reviews, start=1):
-        msg += f"{i}. {review}"
+        msg += f"{i}. {review}\n"
 
     await message.answer(text=msg)
 
