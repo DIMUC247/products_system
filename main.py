@@ -15,8 +15,7 @@ load_dotenv()
 
 
 root_router = Router()
-root_router.include_router(start_router)
-root_router.include_router(product_router)
+root_router.include_routers(start_router, product_router)
 
 
 async def main() -> None:
@@ -30,5 +29,4 @@ async def main() -> None:
 
 
 if __name__ == "__main__":
-    get_log()
     asyncio.run(main())

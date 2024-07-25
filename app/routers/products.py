@@ -1,6 +1,5 @@
 from aiogram import Router, F
 from aiogram.types import Message, CallbackQuery
-from aiogram.utils.markdown import hbold
 from aiogram.fsm.context import FSMContext
 
 from app.data import open_files, products
