@@ -4,12 +4,12 @@ import json
 from app.data import list_files
 
 
-if not os.path.exists(list_files.products):
-    with open(list_files.products, "w", encoding="utf-8") as fh:
+if not os.path.exists(list_files.animals):
+    with open(list_files.animals, "w", encoding="utf-8") as fh:
         json.dump([], fh)
 
-if not os.path.exists(list_files.sold_products):
-    with open(list_files.sold_products, "w", encoding="utf-8") as file:
+if not os.path.exists(list_files.animals_cured):
+    with open(list_files.animals_cured, "w", encoding="utf-8") as file:
         json.dump([], file)
 
 if not os.path.exists(list_files.reviews):
@@ -17,18 +17,18 @@ if not os.path.exists(list_files.reviews):
         json.dump([], file)
 
 
-def get_products(path: str = list_files.products) -> list:
+def get_animals(path: str = list_files.animals) -> list:
     with open(path, "r", encoding="utf-8") as fh:
-        products = json.load(fh)
+        animals = json.load(fh)
 
-    return products
+    return animals
 
 
-def get_sold_products(path: str = list_files.sold_products) -> list:
+def get_animals_cured(path: str = list_files.animals_cured) -> list:
     with open(path, "r", encoding="utf-8") as file:
-        sold_products = json.load(file)
+        get_animals_cured = json.load(file)
 
-    return sold_products
+    return get_animals_cured
 
 
 def get_reviews(path: str = list_files.reviews) -> list:
