@@ -22,7 +22,7 @@ async def show_animals(message: Message, state: FSMContext):
     animals = open_files.get_animals()
     keyboard = build_animals_keyboard(animals)
     text = "Список тварин"
-    return await edit_or_answer(message=message, text=text, keyboard=keyboard)
+    return await message.answer(text=text, reply_markup=keyboard)
 
 
 @animal_router.callback_query(F.data.startswith("animal_"))
